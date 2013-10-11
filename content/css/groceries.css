@@ -1,0 +1,12 @@
+﻿.viewframe { padding: 0 20px 0 20px;}
+.blue { color: #0088cc;}
+.label-padd {padding-bottom: 8px; }
+.hide { display: none;}
+#message { margin: 20px;}
+.listed {color: #9DA0A4;}
+.black { color:#111111;}
+body { padding-top: 50px; }
+
+blockquote { padding: 2px 20px 0px 20px;
+    margin: 0 0 16px; }
+.pointer { cursor: pointer;}

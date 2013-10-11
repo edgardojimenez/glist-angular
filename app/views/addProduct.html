@@ -1,0 +1,12 @@
+<div class="viewframe">
+	<h3>add products</h3>
+		<form role="form">
+			<input class="form-control" type="text" id="productName" name="productName" ng-model="product.name" required  placeholder="enter product name...">
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" id="addToList" ng-model="product.addToList"> include in grocery
+				</label>
+			</div>
+			<button type="submit" id="saveProduct" ng-click="addProduct(product)" class="btn btn-primary">&nbsp;&nbsp;&nbsp;Save&nbsp;&nbsp;&nbsp;</button>
+		</form>
+</div>

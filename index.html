@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="glist">
+	<head> 
+	<title>Groceries</title> 
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="blue" />
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="content/css/groceries.css" />
+    </head>
+    <body>
+			<div id="page" ng-controller="masterController">
+				<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">g-list</a>
+					</div>
+					<div class="collapse navbar-collapse navbar-ex1-collapse">
+						<ul class="nav navbar-nav">
+							<li ng-class="{active: isActive('/')}">
+								<a href='#/' >{{menu[0]}}</a>
+							</li>
+							<li ng-class="{active: isActive('/products')}">
+								<a href='#/products' >{{menu[1]}}</a>
+							</li>
+							<li ng-class="{active: isActive('/add')}">
+								<a href='#/add' >{{menu[2]}}</a>
+							</li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</nav>
+				<div id="message" class="alert" ng-class="{hide: showAlert(), 'alert-info': showAlertInfo(), 'alert-success': showAlertSuccess(), 'alert-danger': showAlertError(), 'alert-warning': showAlertWarning()}">
+					<button id="close" type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					{{ message }}
+				</div>
+			</div>
+      <div ng-view></div>
+
+			<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+			<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+
+			<script src="app/app.js" ></script>
+			<script src="app/services/config.js" ></script>
+			<script src="app/services/utils.js" ></script>
+			<script src="app/services/repository.js"></script>
+			<script src="app/services/groceriesService.js"></script>
+			<script src="app/services/productsService.js"></script>
+			<script src="app/directives/selector.js"></script>
+			<script src="app/controllers/masterController.js"></script>
+			<script src="app/controllers/groceriesController.js"></script>
+			<script src="app/controllers/productsController.js"></script>
+    </body>
+</html>

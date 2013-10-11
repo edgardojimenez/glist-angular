@@ -1,0 +1,9 @@
+<div class="viewframe">
+	<h3>grocery list</h3>
+	<div ng-repeat="item in groceries">
+		<blockquote>
+			<button type="button" class="btn btn-default pull-right" ng-click="removeGrocery({{item.id}}, $index)" id="{{item.id}}"><span class="glyphicon glyphicon-remove"></span></button>
+			<h4 class="text-info"><input  type="checkbox" />&nbsp;{{item.product}}</h4>
+		</blockquote>
+	</div>
+</div>
